@@ -1,0 +1,77 @@
+{% extends 'commonheader.html' %} {% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      body {
+        background-color: black; /* Set background color to black */
+        color: white; /* Set text color to white for better visibility */
+      }
+      .breadcrumb a {
+        color: white; /* Ensure breadcrumb links are white */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="single-page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>About Us</h2>
+            <ol class="breadcrumb header-bradcrumb justify-content-center">
+              <li class="breadcrumb-item">
+                <a href="/" class="text-white">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                About Us
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-shot-info section-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mt-20 cont2">
+            <h2 class="mb-3">Ai vs human text detector</h2>
+            <p>
+              In the age of rapid advancements in artificial intelligence,
+              distinguishing between human-authored content and AI-generated
+              text has become an important challenge. Our project addresses this
+              issue by developing a robust detection system that can accurately
+              differentiate between texts written by humans and those generated
+              by AI models.
+            </p>
+            <p>
+              Using advanced natural language processing (NLP) techniques and
+              machine learning algorithms, we analyze key linguistic features,
+              sentence structures, and writing patterns that reveal the source
+              of the text. This system is especially valuable for ensuring
+              academic integrity, identifying machine-generated content in
+              educational and professional settings, and maintaining the
+              authenticity of written work in various domains.
+            </p>
+            <p>
+              Our solution is designed to support educators, researchers, and
+              content creators in protecting intellectual property and upholding
+              the quality of human-authored work, while promoting responsible
+              use of AI technologies.
+            </p>
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <img
+              loading="lazy"
+              class="img-fluid"
+              src="/static/images/pic3.jpeg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+{% endblock %}

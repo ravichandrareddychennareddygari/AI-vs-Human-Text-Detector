@@ -1,0 +1,185 @@
+{% extends 'commonheader.html' %} {% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <section class="single-page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Contact Us</h2>
+            <!-- <ol class="breadcrumb header-bradcrumb justify-content-center">
+              <li class="breadcrumb-item">
+                <a href="/" class="text-white">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Contact Us
+              </li>
+            </ol> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Start Contact Us-->
+    <section class="contact-us" id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Details -->
+          <div class="contact-details col-md-6">
+            <h3 class="mb-3">Contact Details</h3>
+
+            <ul class="contact-short-info mt-4">
+              <li class="mb-3">
+                <i class="tf-ion-ios-home"></i>
+                <span>Ravi, Kare College, Madurai</span>
+              </li>
+              <li class="mb-3">
+                <i class="tf-ion-android-phone-portrait"></i>
+                <span>Phone: 91 8317650662</span>
+              </li>
+              <li class="mb-3">
+                <i class="tf-ion-android-globe"></i>
+                <span>Fax: 91 9999999999</span>
+              </li>
+              <li>
+                <i class="tf-ion-android-mail"></i>
+                <span>Email: helloAI@customer.com</span>
+              </li>
+            </ul>
+          </div>
+          <!-- / End Contact Details -->
+
+          <!-- Contact Form -->
+          <div class="contact-form col-md-6">
+            <form
+              id="contact-form"
+              method="post"
+              role="form"
+              onsubmit="showSuccessModal(event)"
+            >
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="form-control"
+                  name="name"
+                  id="name"
+                  required
+                  style="border: 1px solid black"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  required
+                  style="border: 1px solid black"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  required
+                  style="border: 1px solid black"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <textarea
+                  rows="6"
+                  placeholder="Message"
+                  class="form-control"
+                  name="message"
+                  id="message"
+                  required
+                  style="border: 1px solid black"
+                ></textarea>
+              </div>
+              <div id="cf-submit">
+                <input
+                  type="submit"
+                  id="contact-submit"
+                  class="btn btn-transparent"
+                  value="Submit"
+                />
+              </div>
+            </form>
+          </div>
+          <!-- ./End Contact Form -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end section -->
+
+    <!-- Success Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Success</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Your details have been successfully submitted!
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showSuccessModal(event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        // You can add the logic here to handle the form submission (e.g., sending it to a server).
+        // For now, just show the modal.
+        $("#successModal").modal("show");
+
+        // Reset the form after displaying the modal
+        document.getElementById("contact-form").reset();
+      }
+    </script>
+  </body>
+</html>
+{% endblock %}

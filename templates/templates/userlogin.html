@@ -1,0 +1,82 @@
+{% extends 'commonheader.html' %} 
+{% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <section class="single-page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>User Login Page</h2>
+            <ol class="breadcrumb header-bradcrumb justify-content-center">
+              <li class="breadcrumb-item">
+                <a href="/" class="text-white">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                User Login
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Start Contact Us
+	=========================================== -->
+    <section class="contact-us" id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Form -->
+          <div class="contact-form col-md-6">
+            <form
+              id="contact-form"
+              method="post"
+              role="form"
+              action="/userlogincheck" <!-- Corrected to submit data to /userlogincheck -->
+            >
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="Login Name"
+                  class="form-control"
+                  name="uname"
+                  id="uname"
+                  required
+                  style="border: 1px solid black"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="password"
+                  placeholder="Your Password"
+                  class="form-control"
+                  name="pwd"
+                  id="pwd"
+                  required
+                  style="border: 1px solid black"
+                />
+              </div>
+
+              <div id="cf-submit">
+                <input
+                  type="submit"
+                  id="contact-submit"
+                  class="btn btn-transparent"
+                  value="User Login"
+                />
+              </div>
+            </form>
+          </div>
+          <!-- ./End Contact Form -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end section -->
+  </body>
+</html>
+{% endblock %}

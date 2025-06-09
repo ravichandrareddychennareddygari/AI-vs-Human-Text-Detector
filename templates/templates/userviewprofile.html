@@ -1,0 +1,88 @@
+{% extends 'userheader.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style type="text/css">
+		table, tr, td, th{
+		border:1px solid black;
+		border-collapse:collapse;
+		text-align:center;
+		font-size:18px;
+		}
+		table{
+		width:50%;
+		}
+	</style>
+</head>
+<body>
+<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>User View Profile</h2>
+				<ol class="breadcrumb header-bradcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="/userviewprofile" class="text-white">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">View Profile</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-shot-info section-sm">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mt-20">
+				<h2 class="mb-3">User Data</h2>
+				<p>
+					<table>
+						<tr>
+							<th>User Id</th>
+							<td>
+								{{data.id}}
+							</td>
+						</tr>
+				<tr>
+							<th>First Name</th>
+							<td>
+								{{data.FirstName}}
+							</td>
+						</tr>
+				<tr>
+							<th>Last Name</th>
+							<td>
+								{{data.LastName}}
+							</td>
+						</tr>
+				<tr>
+							<th>User Name</th>
+							<td>
+								{{data.UserName}}
+							</td>
+						</tr>
+				<tr>
+							<th>Email Id</th>
+							<td>
+								{{data.EmailId}}
+							</td>
+						</tr>
+				<tr>
+							<th>Phone Number</th>
+							<td>
+								{{data.PhoneNumber}}
+							</td>
+						</tr>
+					</table>
+				</p>
+			</div>
+			<div class="col-lg-6 mt-4 mt-lg-0">
+				<img loading="lazy" class="img-fluid" src="/static/images/pic2.jpeg" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+
+</body>
+</html>
+{% endblock %}

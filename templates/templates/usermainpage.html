@@ -1,0 +1,87 @@
+{% extends 'userheader.html' %} {% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background-color: black; /* Set background color to black */
+        color: white; /* Set text color to white for better visibility */
+      }
+      .breadcrumb a {
+        color: white; /* Ensure breadcrumb links are white */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="single-page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>About Us</h2>
+            <ol class="breadcrumb header-bradcrumb justify-content-center">
+              <li class="breadcrumb-item">
+                <a href="/" class="text-white">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                About Us
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-shot-info section-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mt-20">
+            <h2 class="mb-3">How Our Detector Works:</h2>
+            <p>
+              Our AI text detector utilizes cutting-edge natural language
+              processing (NLP) and machine learning algorithms to differentiate
+              between human-written and AI-generated content with remarkable
+              accuracy. By analyzing word choice, sentence complexity,
+              coherence, and stylistic elements, the system is able to spot the
+              subtle, often imperceptible, differences that set human text apart
+              from AI-produced text. The detector also takes into account the
+              probability distribution of words, as AI models like GPT tend to
+              predict the next word based on patterns, which can lead to more
+              formulaic language that lacks the diversity found in human thought
+              processes.
+            </p>
+            <p>
+              With the increasing prevalence of AI-generated content in various
+              domains—academic writing, journalism, content marketing, and
+              social media—there is a growing need to ensure content
+              authenticity. Our detector plays a crucial role in combating
+              misinformation, plagiarism, and the unauthorized use of AI tools
+              for generating written work. By distinguishing between human and
+              machine-generated text, it upholds the integrity of written
+              communication and ensures that human creativity is preserved in
+              fields where originality and authenticity are essential.
+            </p>
+            <!-- <p>
+              From academic institutions seeking to detect AI-generated essays
+              and prevent academic dishonesty to businesses verifying the
+              authenticity of user-generated content, our AI text detector
+              serves a wide range of purposes. It helps ensure that students
+              submit original work, content creators produce genuine material,
+              and platforms can monitor AI usage where human input is expected.
+              The tool is also vital for regulatory compliance in industries
+              where transparency and accountability are paramount.
+            </p> -->
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <img
+              loading="lazy"
+              class="img-fluid"
+              src="/static/images/Pic3.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+{% endblock %}

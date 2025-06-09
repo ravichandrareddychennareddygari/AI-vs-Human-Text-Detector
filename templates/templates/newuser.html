@@ -1,0 +1,152 @@
+{% extends 'commonheader.html' %} {% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 
+    <style>
+      body {
+        background-color: black; /* Set background color to black */
+        color: white; /* Set text color to white for better visibility */
+      }
+      .breadcrumb a {
+        color: white; /* Ensure breadcrumb links are white */
+      }
+    </style> -->
+  </head>
+  <body>
+    <section class="single-page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>New User Page</h2>
+            <ol class="breadcrumb header-bradcrumb justify-content-center">
+              <li class="breadcrumb-item">
+                <a href="/" class="text-white">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                New User
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Start Contact Us
+	=========================================== -->
+    <section class="contact-us" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-form col-md-6">
+            <form
+              id="contact-form"
+              method="post"
+              role="form"
+              action="/addnewuser"
+            >
+              <div class="form-group mb-4">{{msg}}</div>
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="First Name "
+                  class="form-control"
+                  name="fname"
+                  id="fname"
+                  required
+                  style="border: 1px solid rgb(1, 1, 1)"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="form-control"
+                  name="lname"
+                  id="lname"
+                  required
+                  style="border: 1px solid rgb(1, 1, 1)"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  required
+                  style="border: 1px solid rgb(1, 1, 1)"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="Phone Num"
+                  class="form-control"
+                  name="phnum"
+                  id="phnum"
+                  required
+                  style="border: 1px solid rgb(1, 1, 1)"
+                  maxlength="10"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="Login Name"
+                  class="form-control"
+                  name="uname"
+                  id="name"
+                  required
+                  style="border: 1px solid rgb(1, 1, 1)"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <input
+                  type="password"
+                  placeholder="Your Password"
+                  class="form-control"
+                  name="pwd"
+                  id="pwd"
+                  required
+                  style="border: 1px solid rgb(1, 1, 1)"
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <textarea
+                  rows="6"
+                  placeholder="Address"
+                  class="form-control"
+                  name="address"
+                  id="address"
+                  required
+                  style="border: 1px solid rgb(1, 1, 1)"
+                ></textarea>
+              </div>
+
+              <div id="cf-submit">
+                <input
+                  type="submit"
+                  id="contact-submit"
+                  class="btn btn-transparent"
+                  value="New User"
+                />
+              </div>
+            </form>
+          </div>
+          <!-- ./End Contact Form -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end section -->
+  </body>
+</html>
+{% endblock %}
